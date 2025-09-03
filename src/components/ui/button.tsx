@@ -18,6 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-music-primary text-primary-foreground hover:bg-music-primary-light transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl",
+        music: "bg-gradient-to-r from-music-primary to-music-primary-light text-primary-foreground hover:shadow-music transition-all duration-300",
+        accent: "bg-music-accent text-music-primary hover:bg-music-accent/90 font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",
