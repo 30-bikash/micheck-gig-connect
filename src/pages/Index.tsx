@@ -3,9 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Music, Users, MapPin, Heart, ArrowRight, Mail, Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { useAuth } from "@/hooks/useAuth";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/music-hero.jpg";
 
 const Index = () => {
+  const { user, signOut } = useAuth();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -26,8 +30,20 @@ const Index = () => {
           </nav>
           <div className="flex items-center gap-4">
             <ThemeToggle />
-            <Button variant="ghost">Sign In</Button>
-            <Button variant="hero">Join Now</Button>
+            {user ? (
+              <Button variant="ghost" onClick={signOut}>
+                Sign Out
+              </Button>
+            ) : (
+              <>
+                <Button variant="ghost" asChild>
+                  <Link to="/signin">Sign In</Link>
+                </Button>
+                <Button variant="hero" asChild>
+                  <Link to="/signup">Join Now</Link>
+                </Button>
+              </>
+            )}
           </div>
         </div>
       </header>
