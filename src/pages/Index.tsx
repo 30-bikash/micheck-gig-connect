@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Music, Users, MapPin, Heart, ArrowRight, Mail } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 import heroImage from "@/assets/music-hero.jpg";
 
 const Index = () => {
@@ -10,9 +11,13 @@ const Index = () => {
       {/* Header */}
       <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container flex h-16 items-center justify-between px-4">
-          <div className="flex items-center gap-2">
-            <Music className="h-8 w-8 text-music-primary" />
-            <span className="text-2xl font-bold text-foreground">MiCheck</span>
+          <div className="flex items-center gap-3">
+            <img 
+              src="/lovable-uploads/267a2a38-4f0f-4b4f-9fb2-83322871e82a.png" 
+              alt="MiCheck Logo" 
+              className="w-10 h-10 rounded-lg"
+            />
+            <span className="text-2xl font-bold bg-gradient-to-r from-music-primary to-music-primary-light bg-clip-text text-transparent">MiCheck</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#artists" className="text-foreground hover:text-music-primary transition-colors">For Artists</a>
@@ -20,6 +25,7 @@ const Index = () => {
             <a href="#fans" className="text-foreground hover:text-music-primary transition-colors">For Fans</a>
           </nav>
           <div className="flex items-center gap-4">
+            <ThemeToggle />
             <Button variant="ghost">Sign In</Button>
             <Button variant="hero">Join Now</Button>
           </div>
@@ -202,8 +208,12 @@ const Index = () => {
         <div className="container max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <Music className="h-6 w-6" />
+              <div className="flex items-center gap-3">
+                <img 
+                  src="/lovable-uploads/267a2a38-4f0f-4b4f-9fb2-83322871e82a.png" 
+                  alt="MiCheck Logo" 
+                  className="w-8 h-8 rounded-lg"
+                />
                 <span className="text-xl font-bold">MiCheck</span>
               </div>
               <p className="text-white/80">

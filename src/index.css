@@ -36,12 +36,14 @@ All colors MUST be HSL.
     --input: 217 33% 87%;
     --ring: 217 91% 20%;
 
-    /* MiCheck Theme Colors */
-    --music-primary: 217 91% 20%;
-    --music-primary-light: 217 91% 25%;
+    /* MiCheck Theme Colors - Based on Logo Gradient */
+    --music-primary: 230 70% 50%;
+    --music-primary-light: 260 70% 60%;
+    --music-secondary: 280 60% 45%;
     --music-accent: 45 100% 65%;
     --music-gradient: linear-gradient(135deg, hsl(var(--music-primary)), hsl(var(--music-primary-light)));
-    --music-hero-gradient: linear-gradient(135deg, hsl(217 91% 15%) 0%, hsl(217 91% 25%) 100%);
+    --music-hero-gradient: linear-gradient(135deg, hsl(230 70% 45%) 0%, hsl(260 70% 55%) 100%);
+    --logo-gradient: linear-gradient(135deg, hsl(230 70% 50%), hsl(260 70% 60%));
     
     /* Shadows */
     --shadow-music: 0 25px 50px -12px hsl(var(--music-primary) / 0.25);

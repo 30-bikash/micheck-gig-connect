@@ -55,6 +55,7 @@ export default {
 				music: {
 					primary: 'hsl(var(--music-primary))',
 					'primary-light': 'hsl(var(--music-primary-light))',
+					secondary: 'hsl(var(--music-secondary))',
 					accent: 'hsl(var(--music-accent))'
 				},
 				sidebar: {
