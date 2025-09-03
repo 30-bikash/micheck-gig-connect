@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Music, Users, MapPin, Heart, ArrowRight, Mail } from "lucide-react";
+import { Music, Users, MapPin, Heart, ArrowRight, Mail, Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import heroImage from "@/assets/music-hero.jpg";
 
@@ -20,9 +20,9 @@ const Index = () => {
             <span className="text-2xl font-bold bg-gradient-to-r from-music-primary to-music-primary-light bg-clip-text text-transparent">MiCheck</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#artists" className="text-foreground hover:text-music-primary transition-colors">For Artists</a>
-            <a href="#venues" className="text-foreground hover:text-music-primary transition-colors">For Venues</a>
-            <a href="#fans" className="text-foreground hover:text-music-primary transition-colors">For Fans</a>
+            <a href="#artists" className="text-foreground hover:text-music-primary transition-all duration-300 hover:scale-105">For Artists</a>
+            <a href="#venues" className="text-foreground hover:text-music-primary transition-all duration-300 hover:scale-105">For Venues</a>
+            <a href="#fans" className="text-foreground hover:text-music-primary transition-all duration-300 hover:scale-105">For Fans</a>
           </nav>
           <div className="flex items-center gap-4">
             <ThemeToggle />
@@ -47,9 +47,6 @@ const Index = () => {
             Connect artists, venues, and fans. Find gigs, book talent, and build your music career.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="accent" size="lg" className="text-lg px-8">
-              Get Started <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 border-white/30 text-white hover:bg-white/10">
               Learn More
             </Button>
@@ -71,7 +68,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Artists */}
-            <Card id="artists" className="border-music-primary/20 hover:shadow-music transition-all duration-300">
+            <Card id="artists" className="border-music-primary/20 hover:shadow-music transition-all duration-500 hover:scale-105 hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-music-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Music className="h-8 w-8 text-white" />
@@ -105,7 +102,7 @@ const Index = () => {
             </Card>
 
             {/* Venues */}
-            <Card id="venues" className="border-music-primary/20 hover:shadow-music transition-all duration-300">
+            <Card id="venues" className="border-music-primary/20 hover:shadow-music transition-all duration-500 hover:scale-105 hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-music-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="h-8 w-8 text-white" />
@@ -139,7 +136,7 @@ const Index = () => {
             </Card>
 
             {/* Fans */}
-            <Card id="fans" className="border-music-primary/20 hover:shadow-music transition-all duration-300">
+            <Card id="fans" className="border-music-primary/20 hover:shadow-music transition-all duration-500 hover:scale-105 hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-music-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Heart className="h-8 w-8 text-white" />
@@ -245,8 +242,29 @@ const Index = () => {
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm text-white/60">
-            © 2024 MiCheck. All rights reserved. Connecting the music industry, one connection at a time.
+          <div className="border-t border-white/20 mt-8 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="text-sm text-white/60">
+                © 2024 MiCheck. All rights reserved. Connecting the music industry, one connection at a time.
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="text-sm text-white/80">Follow us:</span>
+                <div className="flex gap-3">
+                  <a href="https://twitter.com/micheck" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
+                    <Twitter className="h-5 w-5" />
+                  </a>
+                  <a href="https://facebook.com/micheck" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <a href="https://instagram.com/micheck" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a href="https://linkedin.com/company/micheck" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
